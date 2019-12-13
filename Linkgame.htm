@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CUBE LINKGAME</title>
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+    .sign {
+        background-color: rgb(229, 223, 230);
+        color: rgb(10, 89, 126);
+    }
+    
+    .board {
+        background-color: rgb(224, 238, 206);
+    }
+    
+    #top {
+        position: fixed;
+        bottom: 100px;
+        right: 100px;
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .play {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <h3 style="font-size:60px;color:rgb(65, 101, 141);font-family:'Courier New', Courier, monospace;">
+                    <img alt="140x140" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576081568842&di=08ce765cdef633a5c327cbef31dea061&imgtype=0&src=http%3A%2F%2Fi2.w.hjfile.cn%2Fnews%2F201505%2F201505151013734769.jpg" width="200px" />                    CUBE FOR ARTISTS
+                </h3>
+
+                <nav class="navbar navbar-default" role="navigation" style="border: 0ch;">
+                    <div class="navbar-header" style="background-color: rgb(233, 180, 176);">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        <a class="navbar-brand" href="./Mainpage.htm">Homepage</a>
+                    </div>
+
+
+
+
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+
+                            <li class="dropdown" style="background-color: rgb(247, 218, 164);">
+                                <a href="./Artist.htm" class="dropdown-toggle" data-toggle="dropdown">Artists <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li role="presentation">
+                                        <a href="#">Group</a>
+                                        <a href="#">Individual</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li style="background-color: rgb(220, 240, 212);">
+                                <a href="./Linkgame.htm">LinkGame</a>
+                            </li>
+                            <li style="background-color: rgb(215, 233, 250);">
+                                <a href="./Quiz.htm">Award-winning Quiz</a>
+                            </li>
+                            <li class="dropdown" style="background-color: rgb(201, 185, 216);">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Start with<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Sign in</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tour</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Get to know activities</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+
+                        <!-- <div id="search" class="input-group" style="width: 300px; padding-left:100px ;padding-top:5px">
+                            <input type="text" name="search" value="" placeholder="Search" class="form-control input-lg" />
+                            <span class="input-group-btn">
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="search_button"></span>
+                            <span class="search-text">Search</span>
+                            </button>
+                            </span>
+                        </div> -->
+
+                        <!-- 备用搜索框 -->
+                        <!-- <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" />
+                            </div> <button type="submit" class="btn btn-default">Search</button>
+                        </form> -->
+
+                        <form action="" class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input placeholder="Artist u're interested in" type="text" style="border:1px solid #00a0e9; width:250px; line-height:20px; padding:9px 5px; display:block; float:left;" />
+                                <input type="submit" style="width:100px; line-height:37px; background-color:#00a0e9; border:none; display:block; float:left; color:#fff;" value="Serach" />
+                            </div>
+                        </form>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">Link</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">MORE<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Related Website</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                        <a href="#">Leave a message</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+                <div class="jumbotron board text-left">
+                    <h1>
+                        Welcome to CUBE-LinkGame!!!🎮
+                    </h1>
+                    <p>
+                        This is a relaxing game we prepare for you. It's time to test how you know about our artists.😄
+                    </p>
+                    <p>
+                        Take it easy. Have a nice trip.🌞
+                    </p>
+                    <p>
+                        <a class="btn btn-default btn-large" href="#" style="border: 0ch; background-color:rgb(243, 242, 205)">Learn more🍫</a>
+                    </p>
+                </div>
+
+                <br><br><br>
+                <div class="row clearfix">
+                    <div class="col-md-4 column">
+                        <h2>
+                            Heading1
+                        </h2>
+                        <p>
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                        <p>
+                            <a class="btn" href="#">View details »</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 column">
+                        <h2>
+                            Heading2
+                        </h2>
+                        <p>
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                        <p>
+                            <a class="btn" href="#">View details »</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 column">
+                        <h2>
+                            Heading3
+                        </h2>
+                        <p>
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                        </p>
+                        <p>
+                            <a class="btn" href="#">View details »</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="text-warning"><button id="top" class="btn">TOP<span class="glyphicon glyphicon-chevron-up"></span></button></a>
+</body>
+
+</html>
