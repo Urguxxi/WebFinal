@@ -9,6 +9,11 @@
     <script src="./Scripts/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./button.scss">
+    <script src="./Scripts/minified/Physics2DPlugin.min.js"></script>
+    <script src="./Scripts/minified/GSDevTools.min.js"></script>
+    <script src="./Scripts/minified/jquery-1.10.1.min.js"></script>
+    <script src="./Scripts/minified/TweenMax.min.js"></script>
 </head>
 <style>
     .sign {
@@ -33,15 +38,69 @@
         margin-left: auto;
         margin-right: auto;
     }
+    
+    #featureAnimation {
+        background-color: white;
+        height: 262px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .dot {
+        position: absolute;
+        background-color: #91e600;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
 </style>
 
 <body>
     <div class="container">
         <div class="row clearfix">
             <div class="col-md-12 column">
-                <h3 style="font-size:60px;color:rgb(65, 101, 141);font-family:'Courier New', Courier, monospace;">
-                    <img alt="140x140" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576081568842&di=08ce765cdef633a5c327cbef31dea061&imgtype=0&src=http%3A%2F%2Fi2.w.hjfile.cn%2Fnews%2F201505%2F201505151013734769.jpg" width="200px" />                    CUBE FOR ARTISTS
-                </h3>
+                <div class="feature" id="featureAnimation">
+                    <h3 style="font-size:75px;color:rgb(65, 101, 141);font-family:'Courier New', Courier, monospace;position:absolute;margin-top:60px">
+                        <img alt="140x140" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1576081568842&di=08ce765cdef633a5c327cbef31dea061&imgtype=0&src=http%3A%2F%2Fi2.w.hjfile.cn%2Fnews%2F201505%2F201505151013734769.jpg" width="260px" />                        CUBE FOR ARTISTS
+                    </h3>
+                    <div id="featureBackground"></div>
+                </div>
+                <!-- 页头动画脚本 -->
+                <script>
+                    var master = new TimelineMax(),
+                        bg = $("#featureBackground")
+
+                    master.add(control())
+
+                    function control() {
+                        var dots = new TimelineLite(),
+                            qty = 500,
+                            duration = 40.5,
+                            colors = ["#BFA3FF", "#FFE6F8", "#EEFFBC", "#FFE4CE", "#FFACAA", "#C2E2FF"];
+
+                        for (i = 0; i < qty; i++) {
+                            dot = $("<div class='dot'/>").appendTo(bg)[0];
+                            var color = colors[(Math.random() * colors.length) | 0];
+                            TweenLite.set(dot, {
+                                backgroundColor: color,
+                                x: 400,
+                                y: 300
+                            });
+                            delay = Math.random() * duration;
+                            dots.to(dot, duration, {
+                                physics2D: {
+                                    velocity: Math.random() * 400 + 150,
+                                    angle: Math.random() * 40 + 250,
+                                    gravity: 500
+                                }
+                            }, delay);
+                        }
+                        return dots;
+
+                    }
+                </script>
 
                 <nav class="navbar navbar-default" role="navigation" style="border: 0ch;">
                     <div class="navbar-header" style="background-color: rgb(233, 180, 176);">
@@ -148,46 +207,12 @@
                         Take it easy. Have a nice trip.🌞
                     </p>
                     <p>
-                        <a class="btn btn-default btn-large" href="#" style="border: 0ch; background-color:rgb(243, 242, 205)">Learn more🍫</a>
+                        <a class="btn btn-default btn-large bubbly-button" href="./LinkGame/index.htm" style="border: 0ch; background-color:rgb(238, 157, 157);margin-left:300px;font-size:30px">Start a new game🍫</a>
                     </p>
                 </div>
 
                 <br><br><br>
-                <div class="row clearfix">
-                    <div class="col-md-4 column">
-                        <h2>
-                            Heading1
-                        </h2>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                        </p>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 column">
-                        <h2>
-                            Heading2
-                        </h2>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                        </p>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 column">
-                        <h2>
-                            Heading3
-                        </h2>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                        </p>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                </div>
+
 
             </div>
         </div>

@@ -20,13 +20,35 @@
 
 </head>
 <style>
+    /*渐变效果*/
+    
+    .board {
+        font-family: "Exo", sans-serif;
+        color: #fff;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradientBG 8s ease infinite;
+    }
+    
+    @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
     .sign {
         background-color: rgb(229, 223, 230);
         color: rgb(10, 89, 126);
     }
     
     .board {
-        background-color: rgb(225, 246, 247);
+        background-color: rgb(247, 225, 225);
     }
     
     #top {
@@ -113,7 +135,7 @@
         <div class="row clearfix">
             <div class="col-md-12 column">
 
-                <!-- 贝塞尔动画 -->
+                <!-- 首页贝塞尔动画 -->
                 <button id="playPause" class="btn btn-default">pause</button>
                 <div id="container1">
                     <h3 style="position: absolute; font-size:60px;color:rgb(65, 101, 141);font-family:'Courier New', Courier, monospace;">
@@ -376,7 +398,7 @@
                     </p>
                     <br>
                     <p>
-                        <a class="btn btn-default btn-large" href="./Info.htm" style="border: 0ch; background-color:rgb(243, 242, 205)">Learn more🍫</a>
+                        <a class="btn btn-default btn-large" href="./Info.htm" style="border: 0ch; background-color:white">Learn more🍫</a>
                     </p>
                 </div>
 
@@ -479,13 +501,122 @@
                     <a class="right carousel-control" href="#carousel-104265" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
                 <br><br><br>
+                <hr>
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail" style="height: 540px;">
+                            <img alt="300x200" src="./Images/album1.jpg" width="300px" height="300px" />
+                            <div class="caption">
+                                <h3>
+                                    Album of 4minute
+                                </h3>
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                </p>
+                                <p style="margin-top: 100px;">
+                                    <a class="btn btn-success" href="#">Buy</a> <a class="btn" href="#">Learn more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="thumbnail" style="height: 540px;">
+                            <img alt="300x200" src="./Images/album2.jpg" width="300px" height="300px" />
+                            <div class="caption">
+                                <h3>
+                                    Album of MINNIE
+                                </h3>
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                </p>
+                                <p>
+                                    <a class="btn btn-success" href="#">Buy</a> <a class="btn" href="#">Learn more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail" style="height: 540px;">
+                            <img alt="300x200" src="./Images/album3.jpg" width="300px" height="300px" />
+                            <div class="caption">
+                                <h3>
+                                    Album of Beast
+                                </h3>
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                </p>
+                                <p style="margin-top: 120px;">
+                                    <a class="btn btn-success" href="#">Buy</a> <a class="btn" href="#">Learn more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail" style="height: 540px;">
+                            <img alt="300x200" src="./Images/4minute.jpg" width="300px" height="300px" />
+                            <div class="caption">
+                                <h3>
+                                    4minute
+                                </h3>
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                </p>
+                                <p style="margin-top: 110px;">
+                                    <a class="btn btn-primary" href="#">Subscribe</a> <a class="btn" href="#">Learn more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="height: 540px;">
+                        <div class="thumbnail">
+                            <img alt="300x200" src="./Images/minnie.jpg" width="300px" height="300px" />
+                            <div class="caption">
+                                <h3>
+                                    MINNIE
+                                </h3>
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                </p>
+                                <p>
+                                    <a class="btn btn-primary" href="#">Subcribe</a> <a class="btn" href="#">Learn more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail" style="height: 540px;">
+                            <img alt="300x200" src="./Images/beast.jpg" width="300px" height="300px" />
+                            <div class="caption">
+                                <h3>
+                                    Beast
+                                </h3>
+                                <p>
+                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                                </p>
+                                <p style="margin-top: 90px;">
+                                    <a class="btn btn-primary" href="#">Subscribe</a> <a class="btn" href="#">Learn more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
                 <div class="row clearfix">
                     <div class="col-md-4 column">
                         <h2>
-                            Heading1
+                            Intro of 4minute
                         </h2>
                         <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                            4Minute was a South Korean girl group formed in 2009 by Cube Entertainment. The members of the group were Nam Ji-hyun, Heo Ga-yoon, Jeon Ji-yoon, Kim Hyun-a, and Kwon So-hyun. The group was known for its edgy dance-pop style and "girl crush" image that
+                            attracted a large female fan base.
                         </p>
                         <p>
                             <a class="btn" href="#">View details »</a>
@@ -493,10 +624,10 @@
                     </div>
                     <div class="col-md-4 column">
                         <h2>
-                            Heading2
+                            Intro of MINNIE
                         </h2>
                         <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                            I have nothing to say...
                         </p>
                         <p>
                             <a class="btn" href="#">View details »</a>
@@ -504,66 +635,19 @@
                     </div>
                     <div class="col-md-4 column">
                         <h2>
-                            Heading3
+                            Intro of Beast
                         </h2>
                         <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                            Beast (비스트) consists of 5 members: Yoon Doojoon, Yong Junhyung, Yang Yoseob, Lee Gikwang, and Son Dongwoon. Jang Hyunseung left the band after 7 years, in April 2016. The band debuted in October 2009 under Cube Entertainment. They left their old agency
+                            in 2016 and now they are under Around US Entertainment. *The band’s new name is Highlight. Highlight debuted on 20th March 2017.
                         </p>
                         <p>
                             <a class="btn" href="#">View details »</a>
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <img alt="300x200" src="./pool.jpg" />
-                            <div class="caption">
-                                <h3>
-                                    Thumbnail label
-                                </h3>
-                                <p>
-                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                </p>
-                                <p>
-                                    <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <img alt="300x200" src="./Images/test.png" />
-                            <div class="caption">
-                                <h3>
-                                    Thumbnail label
-                                </h3>
-                                <p>
-                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                </p>
-                                <p>
-                                    <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="thumbnail">
-                            <img alt="300x200" src="./test.png" />
-                            <div class="caption">
-                                <h3>
-                                    Thumbnail label
-                                </h3>
-                                <p>
-                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                </p>
-                                <p>
-                                    <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div> <address><strong>SCU</strong><br />Chuanda Ave, Shuangliu District<br /> Chengdu, Sichuan China<br /> <abbr title="Phone">Postcode:610207</abbr></address>
+                <hr>
+                <address><strong>SCU</strong><br />Chuanda Ave, Shuangliu District<br /> Chengdu, Sichuan China<br /> <abbr title="Phone">Postcode:610207</abbr></address>
             </div>
         </div>
     </div>
