@@ -327,14 +327,52 @@
                             </div> <button type="submit" class="btn btn-default">Search</button>
                         </form> -->
 
-                        <form action="" class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input type="text" style="border:1px solid #00a0e9; width:250px; line-height:20px; padding:9px 5px; display:block; float:left;" placeholder="Artist u're interested in" />
-                                <input type="submit" style="width:100px; line-height:37px; background-color:#00a0e9; border:none; display:block; float:left; color:#fff;" value="Serach" />
+                        <!-- <form action="" class="navbar-form navbar-left" role="search">
+                            <div class="form-group textBox">
+                                <input type="text" id="search" name="searchBox" style="border:1px solid #00a0e9; width:250px; line-height:20px; padding:9px 5px; display:block; float:left;" placeholder="Artist u're interested in" />
+                                <input class="searchBtn" type="submit" style="width:100px; line-height:37px; background-color:#00a0e9; border:none; display:block; float:left; color:#fff;" value="Serach" />
                             </div>
-                        </form>
+                        </form> -->
 
-
+                        <script language="javascript">
+                            $(document).ready(function() {
+                                //show loading bar  
+                                function showLoader() {
+                                    $('.search-background').fadeIn(200);
+                                }
+                                //hide loading bar  
+                                function hideLoader() {
+                                    $('#sub_cont').fadeIn(1500);
+                                    $('.search-background').fadeOut(200);
+                                };
+                                $('#search').keyup(function(e) {
+                                    if (e.keyCode == 13) {
+                                        showLoader();
+                                        $('#sub_cont').fadeIn(1500);
+                                        $("#content #sub_cont").load("at2.php?val=" + $("#search").val(), hideLoader());
+                                    }
+                                });
+                                $(".searchBtn").click(function() {
+                                    //show the loading bar  
+                                    showLoader();
+                                    $('#sub_cont').fadeIn(1500);
+                                    $("#content #sub_cont").load("at2.php?val=" + $("#search").val(), hideLoader());
+                                });
+                            });
+                        </script>
+                        <div class="textBox">
+                            <input type="text" value="" maxlength="100" name="searchBox" id="search" style="border:1px solid #00a0e9; width:250px; line-height:25px; padding:9px 5px; display:block; float:left;" placeholder="Artist u're interested in">
+                            <button class="searchBtn" style="width:100px; line-height:37px; background-color:#00a0e9; border:none; display:block; float:left; color:#fff;">Search</button>
+                        </div>
+                        <br clear="all" />
+                        <br>
+                        <div id="content">
+                            <div class="search-background">
+                                <label><img src="loader.gif" alt="" /></label>
+                            </div>
+                            <div id="sub_cont">
+                            </div>
+                        </div>
                         <!-- 遮盖窗体提交留言 -->
                         <div>
                             <div class="modal fade" id="modal-container-285155" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -501,21 +539,20 @@
                     <a class="right carousel-control" href="#carousel-104265" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
                 <br><br><br>
-                <hr>
 
 
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="thumbnail" style="height: 540px;">
+                        <div class="thumbnail">
                             <img alt="300x200" src="./Images/album1.jpg" width="300px" height="300px" />
                             <div class="caption">
                                 <h3>
-                                    Album of 4minute
+                                    Thumbnail label
                                 </h3>
                                 <p>
                                     Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
                                 </p>
-                                <p style="margin-top: 100px;">
+                                <p>
                                     <a class="btn btn-success" href="#">Buy</a> <a class="btn" href="#">Learn more</a>
                                 </p>
                             </div>
@@ -523,11 +560,11 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="thumbnail" style="height: 540px;">
+                        <div class="thumbnail">
                             <img alt="300x200" src="./Images/album2.jpg" width="300px" height="300px" />
                             <div class="caption">
                                 <h3>
-                                    Album of MINNIE
+                                    Thumbnail label
                                 </h3>
                                 <p>
                                     Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
@@ -539,16 +576,16 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="thumbnail" style="height: 540px;">
+                        <div class="thumbnail">
                             <img alt="300x200" src="./Images/album3.jpg" width="300px" height="300px" />
                             <div class="caption">
                                 <h3>
-                                    Album of Beast
+                                    Thumbnail label
                                 </h3>
                                 <p>
                                     Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
                                 </p>
-                                <p style="margin-top: 120px;">
+                                <p>
                                     <a class="btn btn-success" href="#">Buy</a> <a class="btn" href="#">Learn more</a>
                                 </p>
                             </div>
@@ -559,27 +596,27 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="thumbnail" style="height: 540px;">
+                        <div class="thumbnail">
                             <img alt="300x200" src="./Images/4minute.jpg" width="300px" height="300px" />
                             <div class="caption">
                                 <h3>
-                                    4minute
+                                    Thumbnail label
                                 </h3>
                                 <p>
                                     Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
                                 </p>
-                                <p style="margin-top: 110px;">
+                                <p>
                                     <a class="btn btn-primary" href="#">Subscribe</a> <a class="btn" href="#">Learn more</a>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" style="height: 540px;">
+                    <div class="col-md-4">
                         <div class="thumbnail">
                             <img alt="300x200" src="./Images/minnie.jpg" width="300px" height="300px" />
                             <div class="caption">
                                 <h3>
-                                    MINNIE
+                                    Thumbnail label
                                 </h3>
                                 <p>
                                     Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
@@ -591,32 +628,29 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="thumbnail" style="height: 540px;">
+                        <div class="thumbnail">
                             <img alt="300x200" src="./Images/beast.jpg" width="300px" height="300px" />
                             <div class="caption">
                                 <h3>
-                                    Beast
+                                    Thumbnail label
                                 </h3>
                                 <p>
                                     Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
                                 </p>
-                                <p style="margin-top: 90px;">
+                                <p>
                                     <a class="btn btn-primary" href="#">Subscribe</a> <a class="btn" href="#">Learn more</a>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <hr>
                 <div class="row clearfix">
                     <div class="col-md-4 column">
                         <h2>
-                            Intro of 4minute
+                            Heading1
                         </h2>
                         <p>
-                            4Minute was a South Korean girl group formed in 2009 by Cube Entertainment. The members of the group were Nam Ji-hyun, Heo Ga-yoon, Jeon Ji-yoon, Kim Hyun-a, and Kwon So-hyun. The group was known for its edgy dance-pop style and "girl crush" image that
-                            attracted a large female fan base.
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                         </p>
                         <p>
                             <a class="btn" href="#">View details »</a>
@@ -624,10 +658,10 @@
                     </div>
                     <div class="col-md-4 column">
                         <h2>
-                            Intro of MINNIE
+                            Heading2
                         </h2>
                         <p>
-                            I have nothing to say...
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                         </p>
                         <p>
                             <a class="btn" href="#">View details »</a>
@@ -635,19 +669,17 @@
                     </div>
                     <div class="col-md-4 column">
                         <h2>
-                            Intro of Beast
+                            Heading3
                         </h2>
                         <p>
-                            Beast (비스트) consists of 5 members: Yoon Doojoon, Yong Junhyung, Yang Yoseob, Lee Gikwang, and Son Dongwoon. Jang Hyunseung left the band after 7 years, in April 2016. The band debuted in October 2009 under Cube Entertainment. They left their old agency
-                            in 2016 and now they are under Around US Entertainment. *The band’s new name is Highlight. Highlight debuted on 20th March 2017.
+                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
                         </p>
                         <p>
                             <a class="btn" href="#">View details »</a>
                         </p>
                     </div>
                 </div>
-                <hr>
-                <address><strong>SCU</strong><br />Chuanda Ave, Shuangliu District<br /> Chengdu, Sichuan China<br /> <abbr title="Phone">Postcode:610207</abbr><br> <b>Producer:荃荃1248355514@qq.com<br>Contact me if any question</b> <br> Dec. 2019 </address>
+                <address><strong>SCU</strong><br />Chuanda Ave, Shuangliu District<br /> Chengdu, Sichuan China<br /> <abbr title="Phone">Postcode:610207</abbr></address>
             </div>
         </div>
     </div>
